@@ -9,25 +9,37 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    int testCase, n, dp[12] = {}, i;
-
-    dp[0] = 1;
-    for(i=1; i<11; i++) {
-        if(i-1>=0) dp[i] += dp[i-1];
-        if(i-2>=0) dp[i] += dp[i-2];
-        if(i-3>=0) dp[i] += dp[i-3];
-    }
     
-    scanf("%d", &testCase);
-    while(testCase--) {
-        scanf("%d", &n);
-        printf("%d\n", dp[n]);
-    }
-
     return 0;
 }
 
-//no.2839
+#pragma mark - 2597
+/*
+int max(int a, int b) {
+    return a>b ? a : b;
+}
+
+int main(int argc, const char * argv[]) {
+    int i, n, dp[301][2] = {0}, stair[301] = {0};
+    scanf("%d", &n);
+    
+    for(i=1; i<=n; i++) {
+        scanf("%d", &stair[i]);
+    }
+    
+    dp[1][0] = dp[1][1] = stair[1];
+    
+    for(i=2; i<=n; i++) {
+        dp[i][0] = dp[i-1][1] + stair[i];
+        dp[i][1] = max(dp[i-2][0], dp[i-2][1]) + stair[i];
+    }
+    
+    printf("%d", max(dp[n][0], dp[n][1]));
+    
+    return 0;
+}*/
+
+# pragma mark - 2839
 /*
 int main(int argc, const char * argv[]) {
     int kg , count = 0;
@@ -48,7 +60,7 @@ int main(int argc, const char * argv[]) {
     return 0;
 } */
 
-//no.1915
+# pragma mark - 1915
 /*
 int min(int a, int b, int c) {
     a = a<b ? a : b;
@@ -76,7 +88,7 @@ int main(int argc, const char * argv[]) {
 }
 */
 
-//no.9095
+# pragma mark - 9095
 /*
 int main(int argc, const char * argv[]) {
     int testCase, n, dp[12] = {}, i;
