@@ -13,6 +13,39 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+#pragma mark - 1932
+/*
+int max(int a, int b) {
+    return a>b ? a : b;
+}
+
+int main(int argc, const char * argv[]) {
+    int n, dp[501][501] = {0}, i, j, res = 0;
+    scanf("%d", &n);
+    
+    for(i=1; i<=n; i++) {
+        for(j=1; j<=i; j++) {
+            scanf("%d", &dp[i][j]);
+            
+            if(j==1) {
+                dp[i][j] += dp[i-1][j];
+            } else if(j==i){
+                dp[i][j] = dp[i-1][j-1];
+            } else {
+                dp[i][j] += max(dp[i-1][j-1], dp[i-1][j]);
+            }
+            
+            if(res<dp[i][j]) {
+                res = dp[i][j];
+            }
+        }
+    }
+    printf("%d", res);
+    
+    return 0;
+}
+ */
+
 #pragma mark - 2597
 /*
 int max(int a, int b) {
