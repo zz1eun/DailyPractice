@@ -13,6 +13,35 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+#pragma mark - 1149
+/*
+int min(int a, int b) {
+    return a<b ? a : b;
+}
+
+int main(int argc, const char * argv[]) {
+    int n, cost[1001][3] = {0}, i, j, dp[1001][3] = {0};
+    scanf("%d", &n);
+    
+    for(i=1; i<=n; i++) {
+        for(j=0; j<=2; j++) {
+            scanf("%d", &cost[i][j]);
+        }
+    }
+    
+    for(i=1; i<=n; i++) {
+        for(j=0; j<=2; j++) {
+            dp[i][0] = min(dp[i-1][1], dp[i-1][2]) + cost[i][0];
+            dp[i][1] = min(dp[i-1][0], dp[i-1][2]) + cost[i][1];
+            dp[i][2] = min(dp[i-1][0], dp[i-1][1]) + cost[i][2];
+        }
+    }
+    
+    printf("%d", min(min(dp[n][0], dp[n][1]), dp[n][2]));
+    
+    return 0;
+}*/
+
 #pragma mark - 1932
 /*
 int max(int a, int b) {
