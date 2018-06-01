@@ -13,6 +13,28 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+#pragma mark - 2293
+/*
+int main(int argc, const char * argv[]) {
+    int n, k, coin[101] = {0}, i, j, dp[10001] = {0};
+    scanf("%d %d", &n, &k);
+    
+    for(i=1; i<=n; i++) {
+        scanf("%d", &coin[i]);
+    }
+    
+    dp[0] = 1;
+    for(i=1; i<=n; i++) {
+        for(j=coin[i]; j<=k; j++) {
+            dp[j] += dp[j-coin[i]];
+        }
+    }
+    
+    printf("%d", dp[k]);
+    
+    return 0;
+}*/
+
 #pragma mark - 1463
 /*
 int min(int a, int b) {
