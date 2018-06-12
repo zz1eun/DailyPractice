@@ -13,6 +13,33 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+#pragma mark - 10844
+/*
+int main(int argc, const char * argv[]) {
+    int n, dp[101][11] = {1}, i, j, count = 0;
+    scanf("%d", &n);
+    
+    for (i = 1; i < 10; i++) {
+        dp[1][i] = 1;
+    }
+    
+    for (i = 2; i <= n; i++) {
+        dp[i][0] = dp[i - 1][1] % 1000000000;
+        
+        for (j = 1; j < 10; j++) {
+            dp[i][j] = (dp[i - 1][j - 1] + dp[i - 1][j + 1]) % 1000000000;
+        }
+    }
+    
+    for (int i = 0; i < 10; i++) {
+        count = (count + dp[n][i]) % 1000000000;
+    }
+    
+    printf("%d\n", count);
+    
+    return 0;
+} */
+
 #pragma mark - 2293
 /*
 int main(int argc, const char * argv[]) {
